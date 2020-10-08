@@ -55,7 +55,7 @@ That class exposes its constructor to you, where you can see how it sets up the 
 
 In order to select the scene `Assignment2` to display instead of `Transforms_Sandbox`, once you are ready to switch you must change your `main-scene.js, line:28` . Simply replace where the `Transforms_Sandbox` name with `Assignment2`. It will draw that instead.
 
-We have marked places in the code with "**// TODO**" to demark anywhere we intend for your final code to be in order to get points. All of these places you modify are inside the file assignment2.js`.
+We have marked places in the code with "**// TODO**" to demark anywhere we intend for your final code to be in order to get points. All of these places you modify are inside the file `assignment2.js`.
 
 ### Graded Steps
 
@@ -81,7 +81,7 @@ NOTE: Please use the default camera definition defined in the `assignment2.js`.
 
     (a) Without passing through one another, the boxes must rotate over time to a maximum angle of `.04*Math.PI`. Place the hinge of each box's rotation motion exactly at the top right edge of the box underneath it. Each box touches the previous in exactly the same way and remains in constant contact, precisely connected only by the correct edge. The boxes may not separate from each other along this edge; no floating geometry is allowed – **10 points.**
 
-        Hint: Remember that you can chain more than just one translation and rotation together when adjusting your transformation between drawing shapes. You might need to.
+        Hint: Remember that you can chain more than just one translation and rotation together when adjusting your transformation between drawing shapes. 
 
     (b) Fluidity of your rotation motion matters. Functions of the form `f(t) = a + b*sin(w*t)` are useful for modeling periodic motion, where "`a`" is large enough that the rotation angle does not go negative and cause boxes to collide. Use `graphics_state.animation_time` for `t`, which is how long the program's been running in milliseconds – **4 points.**
 
