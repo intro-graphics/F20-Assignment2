@@ -1014,9 +1014,8 @@ const Container = tiny.Container =
         // To override, simply pass in "replacement", a JS Object of keys/values you want to override, to generate
         // a new object.  For shorthand you can leave off the key and only provide a value (pass in directly as
         // "replacement") and a guess will be used for which member you want overridden based on type.
-        override(replacement)
-        // override(): Generate a copy by value, replacing certain properties.
-        {
+        override(replacement) {
+            // override(): Generate a copy by value, replacing certain properties.
             return this.helper(replacement, Object.create(this.constructor.prototype))
         }
 
