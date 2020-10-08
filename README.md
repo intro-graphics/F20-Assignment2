@@ -53,13 +53,13 @@ __Your final scene must go in the `assignment2.js` in order to be graded.__
 
 That class exposes its constructor to you, where you can see how it sets up the camera, lighting shader, and materials (which contain quantities related to how shapes and lights will interact), which are all defined there to help you do the actual assignment requirements.
 
-In order to select the scene `Assignment2` to display instead of `Transforms_Sandbox`, once you are ready to switch you must change your `mean-scene.j, line:20` . Simply replace where the `Transforms_Sandbox` name with `Assignment2`. It will draw that instead.
+In order to select the scene `Assignment2` to display instead of `Transforms_Sandbox`, once you are ready to switch you must change your `main-scene.js, line:28` . Simply replace where the `Transforms_Sandbox` name with `Assignment2`. It will draw that instead.
 
 We have marked places in the code with "**// TODO**" to demark anywhere we intend for your final code to be in order to get points. All of these places you modify are inside the file assignment2.js`.
 
 ### Graded Steps
 
-#### Up to 50 points of credit. There is no partial credit any individual requirement.
+#### Up to 50 points of credit. There is no partial credit for any individual requirement.
 
 Implement the assignment in clean and understandable code. Each required part must successfully draw and show up onscreen in order to count.
 
