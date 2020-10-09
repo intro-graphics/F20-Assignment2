@@ -106,7 +106,7 @@ export class Assignment2 extends Base_Scene {
         });
     }
 
-    draw_box(context, graphics_state, model_transform) {
+    draw_box(context, program_state, model_transform) {
         // TODO:  Helper function for requirement 3 (see hint).
         //        This should make changes to the model_transform matrix, draw the next box, and return the newest model_transform.
 

@@ -1,6 +1,6 @@
 # Assignment #2
 
-## Due: 
+## Due: Oct. 25 11:59 PM
 
 ### Repository setup:
 
@@ -83,7 +83,7 @@ NOTE: Please use the default camera definition defined in the `assignment2.js`.
 
         Hint: Remember that you can chain more than just one translation and rotation together when adjusting your transformation between drawing shapes. 
 
-    (b) Fluidity of your rotation motion matters. Functions of the form `f(t) = a + b*sin(w*t)` are useful for modeling periodic motion, where "`a`" is large enough that the rotation angle does not go negative and cause boxes to collide. Use `graphics_state.animation_time` for `t`, which is how long the program's been running in milliseconds – **4 points.**
+    (b) Fluidity of your rotation motion matters. Functions of the form `f(t) = a + b*sin(w*t)` are useful for modeling periodic motion, where "`a`" is large enough that the rotation angle does not go negative and cause boxes to collide. Use `program_state.animation_time` for `t`, which is how long the program's been running in milliseconds – **4 points.**
 
     (c) Iteratively place the rest of the moving box segments on top of one another to complete the swaying motion. Use a hierarchical approach - each box's transform is the "child" of the previous transform, derived from its matrix value – **2 points.**
 
@@ -97,7 +97,7 @@ NOTE: Please use the default camera definition defined in the `assignment2.js`.
 
    (b) Fill in the `set_colors()` function to somehow cause your class's colors to reset to different values. Once you do this, pressing the 'c' key (which already calls `set_colors`) should cycle the colors between the cubes – **2 points.**
 
-5. Draw each cube’s outline (the edges) in white. For this, you will need to design a new `Shape` subclass. Fill in the empty parts we left in the `Cube_Outline` class, defined in your `main-scene.js` file. It will be like your `Cube`'s definition above it, except with your own brand new arrays. Each vertex gets a position and a color (`colors` replaces `normals` in this example). Define the positions of your cube outline as x,y,z coordinates of the cube points. Order them in pairs, so that each pair is one edge of the outline. You may NOT have any extra edges going across diagonals. Set each color value in the `colors` array to full white - making sure the list has as many entries as the `positions` list. Do not make an indices list - instead use "`this.indexed = false`".
+5. Draw each cube’s outline (the edges) in white. For this, you will need to design a new `Shape` subclass. Fill in the empty parts we left in the `Cube_Outline` class, defined in your `assignment2.js` file. It will be like your `Cube`'s definition above it, except with your own brand new arrays. Each vertex gets a position and a color (`colors` replaces `normals` in this example). Define the positions of your cube outline as x,y,z coordinates of the cube points. Order them in pairs, so that each pair is one edge of the outline. You may NOT have any extra edges going across diagonals. Set each color value in the `colors` array to full white - making sure the list has as many entries as the `positions` list. Do not make an indices list - instead use "`this.indexed = false`".
 
     (a) To actually draw your outline, you will need to call `draw()` on it and pass in a material that is compatible with it. That's because you just changed its available `Shape` fields to "positions" and "colors", and so the type of `Shader` we use on it has to know what to do with that information. The variable we called "`this.white`" already holds such a proper, compatible material -- so just pass that one in as your third parameter to `draw()` your outline. This should draw it using exactly the colors you made for it (white colors). Lastly, to actually draw lines instead of triangles (letting it know that there's __pairs__ of vertices instead of triples), you must pass in the string "LINES" as the fourth argument to `draw()` – **6 points.**
 
