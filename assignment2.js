@@ -34,7 +34,7 @@ class Cube_Outline extends Shape {
 
 class Cube_Single_Strip extends Shape {
     constructor() {
-        super("positions", "normals");
+        super("position", "normal");
         // TODO (Extra credit part I)
     }
 }
